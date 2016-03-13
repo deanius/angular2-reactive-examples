@@ -19,12 +19,13 @@ export class GithubSearch {
   page: Control = new Control(1);
   pageValues: number[];
   perPage: Control = new Control(10);
+  perPage$: Observable<number>;
   perPageValues: number[] = [10, 30, 50, 100];
   searchTerm$: Subject<string> = new Subject();
   params$: Observable<any>;
   results$: Observable<any>;
   loading: boolean;
-  totalCount$: Observable<any>;
+  totalCount$: Observable<number>;
   items: any[];
   totalCount: number;
   error: any;
@@ -74,9 +75,11 @@ export class GithubSearch {
     this.totalCount$ = this.results$
       .map((res: any) => res.total_count);
 
+    this.perPage$ = Observable.of(this.perPage.value)
+      .concat(this.perPage.valueChanges.map((value: string) => parseInt(value, 10)));
+
     this.totalCount$
-      .combineLatest(
-        Observable.of(this.perPage.value).concat(this.perPage.valueChanges.map((value: string) => parseInt(value, 10))),
+      .combineLatest(this.perPage$,
         (totalCount: number, perPage: number) => {
           return _.times((totalCount + perPage - 1) / perPage).map((n: number) => n + 1);
         }
