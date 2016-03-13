@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "Angular2 reactive examples",
   "author": "Tomasz Bak <t.bak@selleo.com>",
-  "homepage": "https://github.com/angularclass/angular2-webpack-starter",
+  "homepage": "https://github.com/tb/angular2-reactive-examples",
   "license": "MIT",
   "scripts": {
     "clean": "npm cache clean && rimraf node_modules doc typings coverage dist",

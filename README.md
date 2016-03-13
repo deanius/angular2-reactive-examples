@@ -1,6 +1,10 @@
 # Angular2 reactive examples
 
-### Quick start
+## Demo
+
+[http://tb.github.io/angular2-reactive-examples/](http://tb.github.io/angular2-reactive-examples/)
+
+## Quick start
 
 ```bash
 # install the dependencies
@@ -11,7 +15,7 @@ $ npm start
 ```
 go to [http://localhost:3000](http://localhost:3000) in your browser.
 
-### GitHub Search example
+## GitHub Search example
 
 - [x] search GitHub with term, page and per_page using Observable streams
 - [x] handle API errors

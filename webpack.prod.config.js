@@ -22,8 +22,8 @@ var HOST = process.env.HOST || 'localhost';
 var PORT = process.env.PORT || 8080;
 
 var metadata = {
-  title: 'Angular2 Webpack Starter by @gdi2990 from @AngularClass',
-  baseUrl: '/',
+  title: 'Angular2 reactive examples',
+  baseUrl: '/angular2-reactive-examples/',
   host: HOST,
   port: PORT,
   ENV: ENV
