@@ -103,7 +103,8 @@ module.exports = {
     watchOptions: {
       aggregateTimeout: 300,
       poll: 1000
-    }
+    },
+    stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
   },
   node: {
     global: 'window',
