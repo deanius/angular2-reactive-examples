@@ -31,8 +31,8 @@ Icon?
 Thumbs.db
 
 # Node Files #
-/node_modules
-/bower_components
+#/node_modules
+#/bower_components
 npm-debug.log
 
 # Coverage #
