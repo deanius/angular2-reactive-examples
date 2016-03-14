@@ -75,8 +75,8 @@ export class GithubSearch {
     this.totalCount$ = this.results$
       .map((res: any) => res.total_count);
 
-    this.perPage$ = Observable.of(this.perPage.value)
-      .concat(this.perPage.valueChanges.map((value: string) => parseInt(value, 10)));
+    this.perPage$ = this.perPage.valueChanges.startWith(this.perPage.value)
+      .map((value: string) => parseInt(value, 10));
 
     this.totalCount$
       .combineLatest(this.perPage$,
